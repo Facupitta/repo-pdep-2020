@@ -15,12 +15,12 @@ loOdia(elCarnicero, Victima):-
 
 
 esMasRico(Persona, tiaAgatha):-
-	not(loOdia(elCarnicero, Persona)),
-	viveEn(mansionDreadbury, Persona).
+	viveEn(mansionDreadbury, Persona),
+	not(loOdia(elCarnicero, Persona)).
 
 loMata(Matador, Victima):-
 	loOdia(Matador, Victima),
-	esMasRico(Victima, Matador),
+	not(esMasRico(Matador, Victima)),
 	viveEn(mansionDreadbury, Matador).
 
 /*  1)
@@ -32,4 +32,15 @@ loMata(Matador, Victima):-
 	?- loOdia(Quien, tiaAgatha).	-> Quien = tiaAgatha ; Quien = elCarnicero.
 	?- loOdia(Odiador, Odiado).		-> Odiador = charles, Odiado = elCarnicero ; ...
 	?- loOdia(elCarnicero, _).		-> true
+
+	ejercicio extra:
+	esArgentinoOUruguayo(UnaPersona):-
+		nacionalidad(UnaPersona, uruguaya).
+
+	esArgentinoOUruguayo(UnaPersona):-
+		nacionalidad(UnaPersona, argentina).
+
+	esRioplatense(UnaObra):-
+		escribio(UnaPersona, UnaObra),
+		esArgentinoOUruguayo(UnaPersona).
 */
