@@ -30,7 +30,11 @@ loMata(Matador, Victima):-
 	?- loOdia(_, milhouse).			-> false
 	?- loOdia(charles, Quien).		-> Quien = elCarnicero.
 	?- loOdia(Quien, tiaAgatha).	-> Quien = tiaAgatha ; Quien = elCarnicero.
-	?- loOdia(Odiador, Odiado).		-> Odiador = charles, Odiado = elCarnicero ; ...
+	?- loOdia(Odiador, Odiado).		-> Odiador = charles, Odiado = elCarnicero ;
+									   Odiador = Odiado, Odiado = tiaAgatha ;
+									   Odiador = tiaAgatha, Odiado = charles ;
+									   Odiador = elCarnicero, Odiado = tiaAgatha ;
+									   Odiador = elCarnicero, Odiado = charles,
 	?- loOdia(elCarnicero, _).		-> true
 
 	ejercicio extra:
