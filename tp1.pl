@@ -20,11 +20,11 @@ esMasRico(Persona, tiaAgatha):-
 
 loMata(Matador, Victima):-
 	loOdia(Matador, Victima),
-	not(esMasRico(Matador, Victima)),
-	viveEn(mansionDreadbury, Matador).
+	viveEn(mansionDreadbury, Matador),
+	not(esMasRico(Matador, Victima)).
 
 /*  1)
-	?- loMata(Quien, tiaAgatha).	-> false (no la mata nadie)
+	?- loMata(Quien, tiaAgatha).	-> Quien = tiaAgatha (se suicidó!?)
 	
 	2)
 	?- loOdia(_, milhouse).			-> false
