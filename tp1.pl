@@ -1,13 +1,13 @@
-viveEn(mansionDreadbury, tiaAgatha).
-viveEn(mansionDreadbury, elCarnicero).
-viveEn(mansionDreadbury, charles).
+viveEnLaMansion(tiaAgatha).
+viveEnLaMansion(elCarnicero).
+viveEnLaMansion(charles).
 
 loOdia(charles, Victima):-
-	viveEn(mansionDreadbury, Victima),
+	viveEnLaMansion(Victima),
 	not(loOdia(tiaAgatha, Victima)).
 
 loOdia(tiaAgatha, Victima):-
-	viveEn(mansionDreadbury, Victima),
+	viveEnLaMansion(Victima),
 	Victima \= elCarnicero.
 
 loOdia(elCarnicero, Victima):-
@@ -15,12 +15,12 @@ loOdia(elCarnicero, Victima):-
 
 
 esMasRico(Persona, tiaAgatha):-
-	viveEn(mansionDreadbury, Persona),
+	viveEnLaMansion(Persona),
 	not(loOdia(elCarnicero, Persona)).
 
 loMata(Matador, Victima):-
 	loOdia(Matador, Victima),
-	viveEn(mansionDreadbury, Matador),
+	viveEnLaMansion(Matador),
 	not(esMasRico(Matador, Victima)).
 
 /*  1)
