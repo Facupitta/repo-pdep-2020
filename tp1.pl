@@ -15,12 +15,10 @@ loOdia(elCarnicero, Victima):-
 
 
 esMasRico(Persona, tiaAgatha):-
-	viveEnLaMansion(Persona),
 	not(loOdia(elCarnicero, Persona)).
 
 loMata(Matador, Victima):-
 	loOdia(Matador, Victima),
-	viveEnLaMansion(Matador),
 	not(esMasRico(Matador, Victima)).
 
 /*  1)
