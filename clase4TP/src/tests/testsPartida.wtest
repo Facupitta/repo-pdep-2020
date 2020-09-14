@@ -1,0 +1,21 @@
+import partida.partida
+import personajes.*
+import equipos.*
+
+describe "Contexto fin de partida"{
+	fixture{
+		partida.jugarPartida()
+	}
+	
+	test "Test Toro roba cotonetes y una manguera tras haber luchado contra Pocardo y Tulipán"{
+		assert.equals(#{"cotonetes", "manguera"}, toro.objetos())
+	}
+	
+	test "Test el equipo ganador es el Rojo"{
+		assert.equals(equipoRojo, partida.equipoGanador())
+	}
+	
+	test "Test los gritos del equipo ganador es una lista con los gritos de Pocardo y Tulipán"{
+		assert.equals(#{"Hora de cuidar a las plantas", "¡Siente el poder de la musica!"}, partida.gritosDeGanadores().asSet())
+	}
+}

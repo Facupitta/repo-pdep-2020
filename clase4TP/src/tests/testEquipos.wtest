@@ -1,0 +1,12 @@
+import equipos.equipoRojo
+import personajes.pocardo
+
+describe "Contexto Pocardo queda con 0 de energía"{
+	fixture{
+		pocardo.disminuirEnergia(pocardo.energia())
+	}
+	
+	test "Test los gritos de victoria del equipo rojo es una colección con sólo el grito de Tulipán"{
+		assert.equals(#{"Hora de cuidar a las plantas"}, equipoRojo.gritosDeVictoria().asSet())
+	}
+}

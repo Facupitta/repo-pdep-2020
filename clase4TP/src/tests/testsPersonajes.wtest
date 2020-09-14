@@ -1,0 +1,22 @@
+import personajes.*
+
+describe "Contexto Tulipán pelea contra Pamela"{
+	fixture{
+		tulipan.pelearManoAMano(pamela)
+	}
+	
+	test "Test Pamela tiene  tras haber sido atacada por Tulipán"{
+		assert.equals(3000, pamela.energia())
+	}
+}
+
+describe "Contexto Toro pelea contra Pamela dos veces"{
+	fixture{
+		toro.pelearManoAMano(pamela)
+		toro.pelearManoAMano(pamela)
+	}
+	
+	test "Test Toro sólo se queda con una de las dos cintas de Pamela tras luchar con ella"{
+		assert.equals(#{"cintaDePapel"}, toro.objetos())
+	}
+}
