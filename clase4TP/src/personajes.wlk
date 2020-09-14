@@ -20,7 +20,7 @@ object pamela {
 	}
 	
 	method quitarObjeto(unObjeto){
-		self.objetos().remove(unObjeto)
+		objetos.remove(unObjeto)
 	}
 	
 	method pelearManoAMano(unContrincante){
@@ -58,7 +58,7 @@ object pocardo {
 	}
 	
 	method quitarObjeto(unObjeto){
-		self.objetos().remove(unObjeto)
+		objetos.remove(unObjeto)
 	}
 	
 	method pelearManoAMano(unContrincante){
@@ -92,7 +92,7 @@ object tulipan {
 	}
 	
 	method quitarObjeto(unObjeto){
-		self.objetos().remove(unObjeto)
+		objetos.remove(unObjeto)
 	}
 	
 	method pelearManoAMano(unContrincante){
