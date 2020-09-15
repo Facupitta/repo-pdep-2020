@@ -10,6 +10,10 @@ object pamela {
 		return objetos.size()
 	}
 	
+	method ultimoObjeto(){
+		return objetos.last()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -49,6 +53,10 @@ object pocardo {
 	
 	method cantidadDeObjetos(){
 		return objetos.size()
+	}
+	
+	method ultimoObjeto(){
+		return objetos.last()
 	}
 	
 	method energia(){
@@ -92,6 +100,10 @@ object tulipan {
 		return objetos.size()
 	}
 	
+	method ultimoObjeto(){
+		return objetos.last()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -130,6 +142,10 @@ object toro {
 		return objetos.size()
 	}
 	
+	method ultimoObjeto(){
+		return objetos.last()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -143,7 +159,7 @@ object toro {
 	}
 	
 	method robarUltimoObjeto(unContrincante){
-		objetoRobado = unContrincante.objetos().last()
+		objetoRobado = unContrincante.ultimoObjeto()
 		unContrincante.quitarObjeto(objetoRobado)
 		objetos.add(objetoRobado)
 	}
