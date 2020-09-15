@@ -6,6 +6,10 @@ object pamela {
 		return objetos
 	}
 	
+	method cantidadDeObjetos(){
+		return objetos.size()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -41,6 +45,10 @@ object pocardo {
 	
 	method objetos(){
 		return objetos
+	}
+	
+	method cantidadDeObjetos(){
+		return objetos.size()
 	}
 	
 	method energia(){
@@ -80,6 +88,10 @@ object tulipan {
 		return objetos
 	}
 	
+	method cantidadDeObjetos(){
+		return objetos.size()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -114,6 +126,10 @@ object toro {
 		return objetos
 	}
 	
+	method cantidadDeObjetos(){
+		return objetos.size()
+	}
+	
 	method energia(){
 		return energia
 	}
@@ -133,7 +149,7 @@ object toro {
 	}
 	
 	method pelearManoAMano(unContrincante){
-		unContrincante.disminuirEnergia(200 * unContrincante.objetos().size())
+		unContrincante.disminuirEnergia(200 * unContrincante.cantidadDeObjetos())
 		self.robarUltimoObjeto(unContrincante)
 	}
 	
