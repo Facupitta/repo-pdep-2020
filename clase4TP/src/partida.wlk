@@ -1,22 +1,19 @@
 import equipos.*
 
 object partida {
-	const equipos = [equipoAzul, equipoRojo]
-	var equipoGanador
-	var gritosDeGanadores
+	const equipo1 = equipoAzul
+	const equipo2 = equipoRojo	
 	
 	method jugarPartida(){
-		equipos.get(0).atacarEquipo(equipos.get(1))
-		equipos.get(1).atacarEquipo(equipos.get(0))
-		equipoGanador = equipos.max({equipo => equipo.energiaTotal()})
-		gritosDeGanadores = equipoGanador.gritosDeVictoria()
+		equipo1.atacarEquipo(equipo2)
+		equipo2.atacarEquipo(equipo1)
 	}
 	
 	method equipoGanador(){
-		return equipoGanador
+		return [equipo1, equipo2].max({equipo => equipo.energiaTotal()})
 	}
 	
 	method gritosDeGanadores(){
-		return gritosDeGanadores
+		return self.equipoGanador().gritosDeVictoria()
 	}
 }
