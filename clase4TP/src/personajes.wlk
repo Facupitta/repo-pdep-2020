@@ -1,7 +1,6 @@
 object pamela {
 	var objetos = ["algodon", "aguaOxigenada", "cintaDePapel", "cintaDePapel"]
 	var energia = 6000
-	const gritoDeVictoria = "Aca paso la Pamela"
 	
 	method objetos(){
 		return objetos
@@ -32,14 +31,13 @@ object pamela {
 	}
 	
 	method gritoDeVictoria(){
-		return gritoDeVictoria
+		return "Aca paso la Pamela"
 	}
 }
 
 object pocardo {
 	var objetos = ["guitarra", "curita", "cotonetes"]
 	var energia = 5600
-	const gritoDeVictoria = "¡Siente el poder de la musica!"	
 	
 	method objetos(){
 		return objetos
@@ -70,14 +68,13 @@ object pocardo {
 	}
 	
 	method gritoDeVictoria(){
-		return gritoDeVictoria
+		return "¡Siente el poder de la musica!"
 	}
 }
 
 object tulipan {
 	var objetos = ["rastrillo", "maceta", "maceta", "manguera"]
 	var energia = 8400
-	const gritoDeVictoria = "Hora de cuidar a las plantas"
 	
 	method objetos(){
 		return objetos
@@ -104,7 +101,7 @@ object tulipan {
 	}
 	
 	method gritoDeVictoria(){
-		return gritoDeVictoria
+		return "Hora de cuidar a las plantas"
 	}
 }
 
@@ -112,7 +109,6 @@ object toro {
 	var objetos = #{}
 	var energia = 7800
 	var objetoRobado
-	const gritoDeVictoria = "No se metan con el toro"
 	
 	method objetos(){
 		return objetos
@@ -146,6 +142,6 @@ object toro {
 	}
 	
 	method gritoDeVictoria(){
-		return gritoDeVictoria
+		return "No se metan con el toro"
 	}
 }
